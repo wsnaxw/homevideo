@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpringBoot模版渲染</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script>
+        function playVideo(index) {
+            window.open("video/"+index)
+
+
+        }
+    </script>
+
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>视频名称</th>
+    </tr>
+    <tr th:each="index:${list}">
+        <td th:text="${index}"  th:onclick="playVideo([[${index}]])">
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>
